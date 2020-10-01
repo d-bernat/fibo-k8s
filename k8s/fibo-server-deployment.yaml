@@ -10,7 +10,7 @@ spec:
     template:
         metadata:
             labels:
-                component: server
+              component: server
         spec:
             containers:
                 - name: fibo-server

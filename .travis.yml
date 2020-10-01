@@ -1,0 +1,11 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - openssl aes-256-cbc -K $encrypted_9b054dc6b00b_key -iv $encrypted_9b054dc6b00b_iv -in fibo-k8s-account.json.enc -out fibo-k8s-account.json -d
+    - docker build -t dbernat/fibotest -f ./client/Dockerfile.dev ./client
+    - curl https://sdk.cloud.google.com | bash > /dev/null;
+    - source $HOME/google-cloud-sdk/path.bash.inc
+    - gcloud components update kubectl
+    - gcloud auth activate-service-account --key-file service-account.json
+    
