@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: worker-deployment
+    name: fibo-worker-deployment
 spec:
     replicas: 1
     selector:
