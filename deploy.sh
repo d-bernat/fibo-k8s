@@ -1,6 +1,6 @@
-docker build -t dbernat/fibo-client:latest -t dbernat/fibo-client:$SHA -f ./client/DockerFile ./client
-docker build -t dbernat/fibo-server:latest -t dbernat/fibo-server:$SHA -f ./server/DockerFile ./server
-docker build -t dbernat/fibo-worker:latest -t bernat/fibo-worker:$SHA -f ./worker/DockerFile ./worker
+docker build -t dbernat/fibo-client:latest -t dbernat/fibo-client:$SHA -f ./client/Dockerfile ./client
+docker build -t dbernat/fibo-server:latest -t dbernat/fibo-server:$SHA -f ./server/Dockerfile ./server
+docker build -t dbernat/fibo-worker:latest -t bernat/fibo-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push  dbernat/fibo-client:latest
 docker push  dbernat/fibo-server:latest
