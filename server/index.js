@@ -43,6 +43,7 @@ app
             res.send(values);
         })
     })
+    
     .post('/values', async (req, res) => {
         const index = req.body.index;
         if(parseInt(index) > 40){
