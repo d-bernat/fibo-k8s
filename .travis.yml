@@ -26,8 +26,8 @@ deploy:
       skip_cleanup: true
       on: 
         branch: master
-    - provider: script
-      script: bash ./deploy_dev.sh
-      skup_cleanup: true
-      on:
-        branch: feature-DB-*
+    # - provider: script
+    #   script: bash ./deploy_dev.sh
+    #   skup_cleanup: true
+    #   on:
+    #     branch: feature-DB-*
