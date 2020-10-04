@@ -21,8 +21,13 @@ script:
     - docker run -e CI=true dbernat/fibotest npm run test
 
 deploy:
-    provider: script
-    script: bash ./deploy.sh
-    skip_cleanup: true
-    on: 
+    - provider: script
+      script: bash ./deploy.sh
+      skip_cleanup: true
+      on: 
         branch: master
+    - provider: script
+      script: bash ./deploy_dev.sh
+      skup_cleanup: true
+      on:
+        branch: feature-DB-*
